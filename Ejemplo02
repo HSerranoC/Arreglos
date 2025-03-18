@@ -1,0 +1,41 @@
+/*
+ * Created by SharpDevelop.
+ * User: Dell7240
+ * Date: 18/3/2025
+ * Time: 13:46
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+
+namespace Arreglos_Ejemplo01_ClasePRE104
+{
+	class Program
+	{
+		static void MostrarSueldos(double[] Sueldos)
+		{
+			Console.Write("\n\tLos sueldos ingresados son: ");
+			for (int i = 0; i < 5; i++) {
+				Console.Write("\n\t"+Sueldos[i]);
+			}
+		}
+		
+		public static void Main(string[] args)
+		{
+			Console.Title = "EJEMPLO 01 ARREGLOS Y PROCEDIMIENTOS";
+			double[] Sueldos;
+			Sueldos = new double[5];
+			
+			for (int i = 0; i < 5; i++) {
+				Console.Write("\n\tIngrese el sueldo del empleado "+(i+1)+" :  ");
+				string Cadena = Console.ReadLine();
+				Sueldos[i] = double.Parse(Cadena);
+			}
+			
+			MostrarSueldos(Sueldos);
+			
+			Console.Write("\n");
+			Console.ReadKey(true);
+		}
+	}
+}
