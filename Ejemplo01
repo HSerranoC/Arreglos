@@ -1,0 +1,49 @@
+/*
+ * Created by SharpDevelop.
+ * User: Dell7240
+ * Date: 18/3/2025
+ * Time: 14:36
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+
+namespace Arreglos_Ejemplo03_ClasePRE104
+{
+	class Program
+	{
+		static void Array(int[] Edades,int DimensionArreglo)
+		{
+			int SumaEdades = 0;
+			
+			for (int i = 0; i < DimensionArreglo; i++) {
+				Console.Write("\n\tEdad del estudiante "+(i+1)+":  ");
+				Edades[i] = int.Parse(Console.ReadLine());
+			}	
+			
+			foreach (int age in Edades) {
+				SumaEdades = SumaEdades+age; 
+			}
+			
+			Console.Write("\n\tLa suma de las edades es: "+SumaEdades);
+		}
+		
+		public static void Main(string[] args)
+		{
+			
+			
+			Console.Title = "EJEMPLO foreach";
+			
+			int DimensionArreglo;
+			Console.Write("\n\t¿Cuántas edades desea ingresar?  ");
+			DimensionArreglo = int.Parse(Console.ReadLine());
+			
+			int[] Edades = new int[DimensionArreglo];
+			
+			Array(Edades,DimensionArreglo);
+						
+			Console.Write("\n");
+			Console.ReadKey(true);
+		}
+	}
+}
